@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Handler</title>
+</head>
+<body>
+    <h1>Authorization Successful</h1>
+    <p>Your authorization code is:</p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.body.innerHTML += `<strong>${params.get('code')}</strong>`;
+    </script>
+</body>
+</html>
